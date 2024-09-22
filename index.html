@@ -21,7 +21,7 @@
                 Path Finder
             </h1>
             <div class="speeddropdown">
-                <button onmouseover="DropDown(event)"  id='speedbtntext' class='btn-speed'> Speed<i style="padding-left:10px"
+                <button onmouseenter="DropDown(event)"  id='speedbtntext' class='btn-speed'> Speed<i style="padding-left:10px"
                         class="fa fa-caret-down"></i></button>
                 <div class="speeddropdownContent">
                     <a onclick="changeSpeed(this)" class='speed-link' href="#">Fast</a>
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="algodropdown">
-                <button onmouseover="DropDown(event)" class='btn-algo' id='algobtntext'>Algorithm's<i
+                <button onmouseenter="DropDown(event)"  class='btn-algo' id='algobtntext'>Algorithm's<i
                         style="padding-left:10px" class="fa fa-caret-down"></i></button>
                 <div class="algodropdownContent">
                     <a onclick="changeAlgo(this)" class='algo-link' href="#">Breadth First Search</a>
@@ -48,6 +48,7 @@
             <div class="">
                 <button onclick="clearPath()" class=' reset-button' id='btnclearswalls'>Clear Path and Visited Nodes</button>
             </div>
+        </div>
     </header>
     
     <div class="container">

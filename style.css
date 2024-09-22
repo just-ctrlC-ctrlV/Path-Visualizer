@@ -48,6 +48,8 @@ body{
 /* Dropdown content styles */
 .speeddropdownContent, .algodropdownContent, .mazaDropDowncontent {
     display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: absolute;
     background-color: white;
     min-width: 160px;
