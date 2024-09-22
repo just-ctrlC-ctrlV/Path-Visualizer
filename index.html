@@ -21,7 +21,7 @@
                 Path Finder
             </h1>
             <div class="speeddropdown">
-                <button onclick="DropDown(event)" id='speedbtntext' class='btn-speed'>Fast<i style="padding-left:10px"
+                <button onmouseover="DropDown(event)"  id='speedbtntext' class='btn-speed'> Speed<i style="padding-left:10px"
                         class="fa fa-caret-down"></i></button>
                 <div class="speeddropdownContent">
                     <a onclick="changeSpeed(this)" class='speed-link' href="#">Fast</a>
@@ -30,22 +30,17 @@
                 </div>
             </div>
             <div class="algodropdown">
-                <button onclick="DropDown(event)" class='btn-algo' id='algobtntext'>Algorithm's<i
+                <button onmouseover="DropDown(event)" class='btn-algo' id='algobtntext'>Algorithm's<i
                         style="padding-left:10px" class="fa fa-caret-down"></i></button>
                 <div class="algodropdownContent">
-                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Breadth first search</a>
-                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Best first search</a>
+                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Breadth First Search</a>
+                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Best First Search</a>
                     <a onclick="changeAlgo(this)" class='algo-link' href="#">Dijkstra</a>
                     <!-- <a onclick="changeAlgo(this)" class='algo-link' href="#">A *</a> -->
                 </div>
             </div>
             <div class="MazeDropDown">
-                <button onclick="DropDown(event)" id="mazebtntext" class='btn-maze'><span></span>Maze
-                    generation</span><i style="padding-left:10px" class="fa fa-caret-down"></i></button>
-                <div class="mazaDropDowncontent">
-                    <a class='maze-link' onclick="randomMaze()" href="#">Random Maze</a>
-
-                </div>
+                <button  onclick="randomMaze()" href="#" id="mazebtntext" class='btn-maze'>Random Maze</button>
             </div>
             <div class="" >
                 <button onclick="clearAll()" class='reset-button' id='btnclearswalls'>Clear Grid</button>
@@ -61,13 +56,13 @@
                  <span id='algoName'>Select Algorithm</span>
             </button>
             <div class='algo-desc'>
-                <div class="algo-desc" id='algoDesc'>
+                <div class="algo-descr" id='algoDesc'>
                     Path Finder visualizes searching algorithms to identify the shortest path.</div>
                 <div class="box">
-                    <p style="margin: 0;color: rgb(6, 136, 136);">Visited Nodes</p>
+                    <p style="margin: 0;color:rgb(162, 76, 6);">Visited Nodes</p>
                     <i class='boxVisited' id='boxVisited'></i>
                     <p id='textV'>0</P>
-                    <p style="margin: 0; color: rgb(173, 192, 2);" id='pn'>Path Nodes</p>
+                    <p style="margin: 0; color: rgb(162, 76, 6);" id='pn'>Path Nodes</p>
                     <i class='boxVisited' id='pathVisited'></i>
                     <p id='textP'>0</p>
                 </div>

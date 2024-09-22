@@ -326,25 +326,25 @@ function closePopUp(element){
 }
 
 
-document.getElementById('btnVis').onmouseenter = (event) => {
-    if (visualizing) {
-        event.target.classList.add('visualizing');
-        event.target.classList.remove('btn-visualize');
-        event.target.style.backgroundColor = 'red'
-        event.target.style.transition = 'all 0.3s';
-    }
-}
-document.getElementById('btnVis').onmouseleave = (event) => {
-    event.target.classList.remove('visualizing');
-    event.target.classList.add('btn-visualize');
-    event.target.style.backgroundColor = 'rgb(28, 187, 139)'
-}
-document.getElementById('btnVis').onmousedown = () => {
-    (!visualizing) ? document.getElementById('btnVis').style.backgroundColor = "rgb(30, 223, 165)" : undefined;
-}
-document.getElementById('btnVis').onmouseup = () => {
-    (!visualizing) ? document.getElementById('btnVis').style.backgroundColor = "rgb(28, 187, 139)" : undefined;
-}
+// document.getElementById('btnVis').onmouseenter = (event) => {
+//     if (visualizing) {
+//         event.target.classList.add('visualizing');
+//         event.target.classList.remove('btn-visualize');
+//         event.target.style.backgroundColor = 'red'
+//         event.target.style.transition = 'all 0.3s';
+//     }
+// }
+// document.getElementById('btnVis').onmouseleave = (event) => {
+//     event.target.classList.remove('visualizing');
+//     event.target.classList.add('btn-visualize');
+//     event.target.style.backgroundColor = 'rgb(28, 187, 139)'
+// }
+// document.getElementById('btnVis').onmousedown = () => {
+//     (!visualizing) ? document.getElementById('btnVis').style.backgroundColor = "rgb(30, 223, 165)" : undefined;
+// }
+// document.getElementById('btnVis').onmouseup = () => {
+//     (!visualizing) ? document.getElementById('btnVis').style.backgroundColor = "rgb(28, 187, 139)" : undefined;
+// }
 function visualize() {
     if (algoselected && !visualizing) {
         document.getElementsByClassName('box')[0].style.display = 'flex';
@@ -356,7 +356,7 @@ function visualize() {
         gridTable.style.pointerEvents = 'none';
         algoVis(algoName.textContent);
         toAnimate(vis, 0, path);
-        algoDesc.textContent = algoName.textContent + " is visualizing "
+        algoDesc.textContent = "Visualizing "+algoName.textContent 
         algoDesc.style.color = "green";
     } 
     else if (!algoselected && !visualizing) {
@@ -371,11 +371,11 @@ function algoVis(algo) {
         var node = dijkstra();
         vis = node[0];
         path = node[1];
-    } if (algo.includes('Breadth first search')) {
+    } if (algo.includes('Breadth First Search')) {
         var node = bredthFirstSearch();
         vis = node[0];
         path = node[1];
-    } if (algo.includes('Best first search')) {
+    } if (algo.includes('Best First Search')) {
         var node = bestFirstSearch();
         vis = node[0];
         path = node[1];
