@@ -201,6 +201,9 @@ gridTable.onmousemove = (event) => {
 }
 function clearAll() {
     if (!viz) {
+        algoDesc.textContent=" Path Finder visualizes searching algorithms to identify the shortest path."
+        document.getElementsByClassName('box')[0].style.display = 'none';
+
         gridTable.style.pointerEvents = 'all';
         startDrag = false;
         endDrag = false;
@@ -227,6 +230,10 @@ function clearAll() {
     }
 }
 function clearPath() {
+    if(!viz){
+    algoDesc.textContent=" Path Finder visualizes searching algorithms to identify the shortest path."
+    document.getElementsByClassName('box')[0].style.display = 'none';
+}
     if (ListOfNodes.length > 0 && !viz) {
         gridTable.style.pointerEvents = 'all'
         visualizing = false;
@@ -360,7 +367,7 @@ function visualize() {
         algoDesc.style.color = "green";
     } 
     else if (!algoselected && !visualizing) {
-        algoDesc.textContent = "select algorithm to visualize"
+        algoDesc.textContent = "Select Algorithm to Visualize"
         algoDesc.style.color = "red";
     }
 }
