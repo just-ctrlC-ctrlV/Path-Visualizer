@@ -26,7 +26,7 @@ var start;
 var end;
 var count = 0;
 var WIDTH = 50;
-var HEIGHT = 23;
+var HEIGHT = screen.height> 800 ?30:16;
 var speed = 5;
 var mouseclicked = false;
 var startDrag = false;
@@ -38,6 +38,8 @@ let curr;
 var pps = 'unv'
 var ppe = 'unv'
 var visualizing = false;
+
+console.log(screen.height);
 
 class QElement {
     constructor(element, priority) {
@@ -293,8 +295,10 @@ function changeMaze(element) {
 function changeSpeed(element) {
     modalspeed.textContent = element.textContent;
     dropDownspeed.style.display = 'none';
+    if (element.textContent.includes('Super Fast'))
+        speed = 1;
     if (element.textContent.includes('Fast'))
-        speed = 5;
+        speed = 10;
     if (element.textContent.includes('slow'))
         speed = 550;
     if (element.textContent.includes('Average'))
