@@ -33,6 +33,7 @@
                 <button onmouseenter="DropDown(event)"  class='btn-algo' id='algobtntext'>Algorithm's<i
                         style="padding-left:10px" class="fa fa-caret-down"></i></button>
                 <div class="algodropdownContent">
+                    <a onclick="changeAlgo(this)" class='algo-link' href="#">Depth First Search</a>
                     <a onclick="changeAlgo(this)" class='algo-link' href="#">Breadth First Search</a>
                     <a onclick="changeAlgo(this)" class='algo-link' href="#">Best First Search</a>
                     <a onclick="changeAlgo(this)" class='algo-link' href="#">Dijkstra</a>
@@ -58,7 +59,7 @@
             </button>
             <div class='algo-desc'>
                 <div class="algo-descr" id='algoDesc'>
-                    Path Finder visualizes searching algorithms to identify the shortest path.</div>
+                    Path Finder helps to visualizes various path finding Algorithms</div>
                 <div class="box">
                     <p style="margin: 0;color:rgb(162, 76, 6);">Visited Nodes</p>
                     <i class='boxVisited' id='boxVisited'></i>
