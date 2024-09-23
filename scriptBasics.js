@@ -26,7 +26,7 @@ var start;
 var end;
 var count = 0;
 var WIDTH = 50;
-var HEIGHT = 16;
+var HEIGHT = 23;
 var speed = 5;
 var mouseclicked = false;
 var startDrag = false;

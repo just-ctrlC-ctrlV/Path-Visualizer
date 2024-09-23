@@ -4,18 +4,18 @@ body{
     margin: 0;
     font-family: 'Lato', sans-serif;
     background: linear-gradient(to bottom, rgba(173, 216, 230, 1), rgba(255, 255, 255, 1));
- 
-
+    height: 100vh;
 }
 
 /* Navbar Styles */
 .navbar {
+    height: 10%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 30px; /* Increased padding for more space */
-    box-shadow: 0 5px 20px rgba(181, 181, 181, 0.2); /* Subtle shadow for depth */
+    padding: 15px 30px; 
+    box-shadow: 0 5px 20px rgba(181, 181, 181, 0.2);
     background: linear-gradient(to right, rgba(85, 85, 85, 1), rgba(50, 50, 50, 1));
 
 }
@@ -92,6 +92,8 @@ body{
     border-radius: 5px;
 }
 .container{
+    height: 85%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
